@@ -1,0 +1,14 @@
+// TypeScript config for non-devvit and shared code.
+{
+  "extends": "../../tools/tsconfig-base.json",
+  "compilerOptions": {
+    "lib": ["WebWorker", "ES2023"],
+
+    "outDir": "../../dist/shared",
+
+    "tsBuildInfoFile": "../../dist/shared/tsconfig.tsbuildinfo"
+  },
+  // https://github.com/Microsoft/TypeScript/issues/25636
+  "include": ["**/*", "**/*.json"],
+  "exclude": ["**/*.test.ts"]
+}

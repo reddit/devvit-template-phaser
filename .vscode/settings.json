@@ -1,0 +1,24 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "cn",
+    "Devvit",
+    "playtest",
+    "protos",
+    "snoovatar",
+    "spez",
+    "templ",
+    "tweenjs",
+    "vstack",
+    "webbit",
+    "webroot",
+    "zoddy",
+    "zstack"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.git": false
+  }
+}

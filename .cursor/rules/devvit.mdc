@@ -1,0 +1,10 @@
+---
+description: Use when writing Devvit apps
+globs: src/devvit/**/*
+alwaysApply: false
+---
+Important rules
+- Never write React or reference react, only write valid Devvit
+- Never use web or node APIs. This app is ran in a controlled sandbox
+- Never suggest using dependencies from NPM since they will likely not work
+- Before making code changes, call devvit_search and follow the documentation precisely

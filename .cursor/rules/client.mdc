@@ -1,0 +1,10 @@
+---
+description: Use when writing webview code
+globs: src/client/**/*
+alwaysApply: false
+---
+Guidelines:
+- Use NPM dependencies if needed, ensure they are web compatible
+- You cannot use websockets. Call devvit_search and query for "realtime" to get more information
+- Only use Phaser and javascript. Do not pull in other game engines.
+

@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+When building these experiences, people will refer to the "devvit app" ([/src/devvit](mdc:src/devvit)) and "client" ([/src/client](mdc:src/client)).
+
+There are four folders to code in:
+- [/src/devvit](mdc:src/devvit): This is a Devvit app. NEVER write React code in here. Use `devvit_search` to understand how Devvit works. Never use web apis in here. This is a sandboxed environment. Import Devvit hooks from public-api like this: `import { Devvit, useWebView } from '@devvit/public-api';`. Devvit apps are shown to the user in the Reddit feed. Devvit apps rely on context to pass down helpful apis including (redis, reddit, media, and more).
+- [/src/client](mdc:src/client): This is the full screen webview. To persist data and access the server, call `fetch(/my/api/endpoint)`. This is how you get access to the APIs you write in [/src/server](mdc:src/server).
+- [/src/server](mdc:src/server): This is a serverless backend written in Node. This is where you can access redis and save data.
+- [/src/shared](mdc:src/shared): This is where you can place code that is to be shared between the devvit app, client, and server and the webview. It's a great place for shared types.
+
+Rules:
+- Assume that typescript, vite, tailwind, eslint, prettier, and all codebase configuration is working. If there is a bug, it is more likely your code than the codebase configuration.

@@ -1,0 +1,9 @@
+webroot
+.editorconfig
+.vscode
+.github
+.prettierrc
+tsconfig.json
+vite.config.ts
+node_modules
+eslint.config.js

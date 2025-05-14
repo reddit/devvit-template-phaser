@@ -1,0 +1,24 @@
+// TypeScript config for all Devvit client code.
+{
+  "extends": "../../tools/tsconfig-base.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "WebWorker"],
+
+    "types": ["node"],
+
+    "rootDir": "..",
+
+    "outDir": "../../dist",
+
+    "tsBuildInfoFile": "../../dist/tsconfig.tsbuildinfo",
+
+    // Devvit.
+    "jsx": "react",
+    "jsxFactory": "Devvit.createElement",
+    "jsxFragmentFactory": "Devvit.Fragment"
+  },
+  // https://github.com/Microsoft/TypeScript/issues/25636
+  "include": ["**/*", "../../package.json", "../server/**/*"],
+  "exclude": ["**/*.test.ts"],
+  "references": [{ "path": "../shared" }]
+}

@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "devvit-phaser-starter-experimental",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "scripts": {
+    "build:client": "cd src/client && vite build",
+    "check": "npm run type-check && npm run lint:fix && npm run prettier",
+    "deploy": "npm run build:client && devvit upload",
+    "dev": "concurrently -p \"[{name}]\" -n \"VITE,DEVVIT,GAME\" -c \"blue,green,magenta\" \"npm run dev:vite\" \"npm run dev:devvit\" \"npm run dev:client\" --restart-tries 2",
+    "dev:client": "cd src/client && vite build --watch",
+    "dev:devvit": "devvit playtest YOUR_SUBREDDIT_NAME",
+    "dev:vite": "cd src/client && vite --port 7474",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
+    "login": "devvit login",
+    "prettier": "prettier-package-json --write ./package.json && prettier --write .",
+    "type-check": "tsc --build"
+  },
+  "dependencies": {
+    "@devvit/client": "0.11.16-next-2025-05-12-ce8dc1307.0",
+    "@devvit/public-api": "0.11.16-next-2025-05-12-ce8dc1307.0",
+    "@devvit/server": "0.11.16-next-2025-05-12-ce8dc1307.0",
+    "devvit": "0.11.16-next-2025-05-12-ce8dc1307.0",
+    "express": "5.1.0",
+    "phaser": "3.88.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.23.0",
+    "@types/express": "5.0.1",
+    "concurrently": "9.1.2",
+    "eslint": "9.23.0",
+    "globals": "15.15.0",
+    "prettier": "3.5.3",
+    "prettier-package-json": "2.8.0",
+    "terser": "5.39.0",
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.29.0",
+    "vite": "6.2.4",
+    "vitest": "3.1.1"
+  }
+}
