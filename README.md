@@ -31,13 +31,13 @@ devvit login
 6. **Make a subreddit**: Make a private subreddit on Reddit.com. This will be where you do your own development. Go to Reddit.com, scroll the left side bar down to communities, and click "Create a community."
 7. **Update the name in package.json**: Find the `dev:devvit` command and replace `YOUR_SUBREDDIT_NAME` with the subreddit name you just created.
 8. **Update yaml file**: In `devvit.yaml` replace `YOUR_APP_NAME` with the name of your app. This will be shown to users that play your app.
-9. **Upload**: Run `npm run upload` and go through the prompts
+9. **Upload**: Run `npm run deploy` and go through the prompts
 10. **Playtest**: Run `npm run dev` to playtest your application in production by going to your subreddit.
 
 ## Commands
 
 - `npm run dev`: Starts a development server where you can develop your application live on Reddit.
-- `npm run upload`: Uploads a new version of your app
+- `npm run deploy`: Uploads a new version of your app
 - `npm run check`: Type checks, lints, and prettifies your app
 
 ## Cursor Integration
