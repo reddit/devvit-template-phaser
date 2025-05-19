@@ -32,7 +32,7 @@ devvit login
 7. **Update the name in package.json**: Find the `dev:devvit` command and replace `YOUR_SUBREDDIT_NAME` with the subreddit name you just created.
 8. **Update yaml file**: In `devvit.yaml` replace `YOUR_APP_NAME` with the name of your app. This will be shown to users that play your app.
 9. **Upload**: Run `npm run deploy` and go through the prompts
-10. **Playtest**: Run `npm run dev` to playtest your application in production by going to your subreddit.
+10. **Playtest**: Run `npm run dev` to playtest your application in production by going to your subreddit. You you should see a subreddit menu action called "New Phaser Starter Post" to create your post.
 
 ## Commands
 
