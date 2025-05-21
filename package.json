@@ -7,14 +7,14 @@
   "scripts": {
     "build:client": "cd src/client && vite build",
     "check": "npm run type-check && npm run lint:fix && npm run prettier",
-    "deploy": "npm run build:client && devvit upload",
+    "deploy": "npm run build:client && devvit upload --copy-paste",
     "dev": "concurrently -p \"[{name}]\" -n \"VITE,DEVVIT,GAME\" -c \"blue,green,magenta\" \"npm run dev:vite\" \"npm run dev:devvit\" \"npm run dev:client\" --restart-tries 2",
     "dev:client": "cd src/client && vite build --watch",
     "dev:devvit": "devvit playtest YOUR_SUBREDDIT_NAME",
     "dev:vite": "cd src/client && vite --port 7474",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
-    "login": "devvit login",
+    "login": "devvit login --copy-paste",
     "prettier": "prettier-package-json --write ./package.json && prettier --write .",
     "type-check": "tsc --build"
   },

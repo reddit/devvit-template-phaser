@@ -1,5 +1,5 @@
 import express from 'express';
-import { createServer } from 'http';
+import { createServer } from '@devvit/server';
 import { devvitMiddleware } from './middleware';
 import { InitResponse, IncrementResponse, DecrementResponse } from '../shared/types/api';
 
