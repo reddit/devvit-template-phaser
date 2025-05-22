@@ -1,17 +1,17 @@
 export type InitResponse = {
-  type: "init";
+  type: 'init';
   postId: string;
   count: number;
 };
 
 export type IncrementResponse = {
-  type: "increment";
+  type: 'increment';
   postId: string;
   count: number;
 };
 
 export type DecrementResponse = {
-  type: "decrement";
+  type: 'decrement';
   postId: string;
   count: number;
 };
