@@ -8,14 +8,6 @@ export default defineConfig([
   { ignores: ['webroot'] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['src/devvit/**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2023,
-      globals: globals.node,
-    },
-  },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['tools/**/*.{ts,tsx,mjs,cjs,js}'],
     languageOptions: {
       ecmaVersion: 2023,

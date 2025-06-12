@@ -1,7 +1,7 @@
 import express from 'express';
-import { createServer } from 'node:http';
-import { devvitMiddleware } from './middleware';
 import { InitResponse, IncrementResponse, DecrementResponse } from '../shared/types/api';
+import { createServer, getContext } from '@devvit/server';
+import { getRedis } from '@devvit/redis';
 
 const app = express();
 
@@ -12,15 +12,13 @@ app.use(express.urlencoded({ extended: true }));
 // Middleware for plain text body parsing
 app.use(express.text());
 
-// Apply Devvit middleware
-app.use(devvitMiddleware);
-
 const router = express.Router();
 
 router.get<{ postId: string }, InitResponse | { status: string; message: string }>(
   '/api/init',
-  async (req, res): Promise<void> => {
-    const { postId } = req.devvit;
+  async (_req, res): Promise<void> => {
+    const { postId } = getContext();
+    const redis = getRedis();
 
     if (!postId) {
       console.error('API Init Error: postId not found in devvit context');
@@ -32,7 +30,7 @@ router.get<{ postId: string }, InitResponse | { status: string; message: string 
     }
 
     try {
-      const count = await req.devvit.redis.get('count');
+      const count = await redis.get('count');
       res.json({
         type: 'init',
         postId: postId,
@@ -51,8 +49,9 @@ router.get<{ postId: string }, InitResponse | { status: string; message: string 
 
 router.post<{ postId: string }, IncrementResponse | { status: string; message: string }, unknown>(
   '/api/increment',
-  async (req, res): Promise<void> => {
-    const { postId } = req.devvit;
+  async (_req, res): Promise<void> => {
+    const { postId } = getContext();
+    const redis = getRedis();
     if (!postId) {
       res.status(400).json({
         status: 'error',
@@ -62,7 +61,7 @@ router.post<{ postId: string }, IncrementResponse | { status: string; message: s
     }
 
     res.json({
-      count: await req.devvit.redis.incrBy('count', 1),
+      count: await redis.incrBy('count', 1),
       postId,
       type: 'increment',
     });
@@ -71,8 +70,9 @@ router.post<{ postId: string }, IncrementResponse | { status: string; message: s
 
 router.post<{ postId: string }, DecrementResponse | { status: string; message: string }, unknown>(
   '/api/decrement',
-  async (req, res): Promise<void> => {
-    const { postId } = req.devvit;
+  async (_req, res): Promise<void> => {
+    const { postId } = getContext();
+    const redis = getRedis();
     if (!postId) {
       res.status(400).json({
         status: 'error',
@@ -82,7 +82,7 @@ router.post<{ postId: string }, DecrementResponse | { status: string; message: s
     }
 
     res.json({
-      count: await req.devvit.redis.incrBy('count', -1),
+      count: await redis.incrBy('count', -1),
       postId,
       type: 'decrement',
     });

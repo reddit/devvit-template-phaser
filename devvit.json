@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "YOUR_APP_NAME",
+  "post": {
+    "client": {
+      "dir": "dist/client",
+      "entry": "dist/client/index.html"
+    }
+  },
+  "server": {
+    "entry": "dist/server/index.cjs"
+  }
+}

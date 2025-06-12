@@ -8,7 +8,7 @@
 
     "rootDir": ".",
 
-    "outDir": "../../dist",
+    "outDir": "../../dist/types/server",
 
     "tsBuildInfoFile": "../../dist/tsconfig.tsbuildinfo"
   },

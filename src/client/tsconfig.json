@@ -4,7 +4,7 @@
   "compilerOptions": {
     "lib": ["DOM", "ES2023", "esnext.disposable"],
 
-    "outDir": "../../dist/client",
+    "outDir": "../../dist/types/client",
 
     // React
     "jsx": "react-jsx",

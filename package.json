@@ -6,12 +6,13 @@
   "type": "module",
   "scripts": {
     "build:client": "cd src/client && vite build",
+    "build:server": "cd src/server && vite build",
     "check": "npm run type-check && npm run lint:fix && npm run prettier",
-    "deploy": "npm run build:client && devvit upload --copy-paste",
-    "dev": "concurrently -p \"[{name}]\" -n \"VITE,DEVVIT,GAME\" -c \"blue,green,magenta\" \"npm run dev:vite\" \"npm run dev:devvit\" \"npm run dev:client\" --restart-tries 2",
+    "deploy": "npm run build:client && npm run build:server && devvit upload",
+    "dev": "concurrently -p \"[{name}]\" -n \"CLIENT,SERVER,DEVVIT\" -c \"blue,green,magenta\" \"npm run dev:client\" \"npm run dev:server\" \"npm run dev:devvit\" --restart-tries 2",
     "dev:client": "cd src/client && vite build --watch",
     "dev:devvit": "devvit playtest YOUR_SUBREDDIT_NAME",
-    "dev:vite": "cd src/client && vite --port 7474",
+    "dev:server": "cd src/server && vite build --watch",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "login": "devvit login --copy-paste",
@@ -19,10 +20,12 @@
     "type-check": "tsc --build"
   },
   "dependencies": {
-    "@devvit/client": "0.11.16-next-2025-05-19-1403da2a7.0",
-    "@devvit/public-api": "0.11.16-next-2025-05-19-1403da2a7.0",
-    "@devvit/server": "0.11.16-next-2025-05-19-1403da2a7.0",
-    "devvit": "0.11.16-next-2025-05-19-1403da2a7.0",
+    "@devvit/client": "0.11.17-next-2025-06-11-9c40662f8.0",
+    "@devvit/public-api": "0.11.17-next-2025-06-11-9c40662f8.0",
+    "@devvit/reddit": "0.11.17-next-2025-06-11-9c40662f8.0",
+    "@devvit/redis": "0.11.17-next-2025-06-11-9c40662f8.0",
+    "@devvit/server": "0.11.17-next-2025-06-11-9c40662f8.0",
+    "devvit": "0.11.17-next-2025-06-11-9c40662f8.0",
     "express": "5.1.0",
     "phaser": "3.88.2"
   },

@@ -2,6 +2,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "json.schemaDownload.enable": true,
   "cSpell.words": [
     "cn",
     "Devvit",
