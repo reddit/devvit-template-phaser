@@ -24,9 +24,10 @@ An experimental starter that explores a new way to build applications on Reddit'
 5. `npm install`
 6. **Make a subreddit**: Make a private subreddit on Reddit.com. This will be where you do your own development. Go to Reddit.com, scroll the left side bar down to communities, and click "Create a community."
 7. **Update the name in package.json**: Find the `dev:devvit` command and replace `YOUR_SUBREDDIT_NAME` with the subreddit name you just created.
-8. **Upload**: Run `npm run deploy` and go through the prompts
-9. **Playtest**: Run `npm run dev` to playtest your application in production by going to your subreddit.
-10. **Create Post**: You you should see a subreddit menu action called "New Phaser Starter Post" to create your post.
+8. **Update json file**: In devvit.json replace YOUR_APP_NAME with the name of your app. This will be shown to users that play your app.
+9. **Upload**: Run `npm run deploy` and go through the prompts
+10. **Playtest**: Run `npm run dev` to playtest your application in production by going to your subreddit.
+11. **Create Post**: Create a post using the subreddit menu action called "Word Guesser: New Post".
 
 ## Commands
 
