@@ -11,6 +11,6 @@ Guidelines:
 - Do not install any libraries that rely on these to function
 - Websockets are not supported
 - HTTP streaming is not supported
-- Redis is accessible from `ctx.devvit`
+- Redis is accessible from `import { getRedis } from '@devvit/redis'`
 
-As this is a serverless runtime (akin to AWS Lambda), do not try to run SQLite or stateful in memory processes. For realtime use cases, consult the docs with devvit_search to learn more about the realtime service you can use from `ctx.devvit`.
+As this is a serverless runtime (akin to AWS Lambda), do not try to run SQLite or stateful in memory processes. For realtime use cases, consult the docs with devvit_search to learn more about the realtime service you can use.

@@ -1,6 +1,0 @@
----
-description: 
-globs: webroot/**/*
-alwaysApply: false
----
-NEVER TOUCH ANYTHING IN THIS FOLDER. DO NOT CONTINUE!
