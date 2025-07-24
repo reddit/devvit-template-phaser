@@ -20,12 +20,12 @@
     "type-check": "tsc --build"
   },
   "dependencies": {
-    "@devvit/client": "next",
-    "@devvit/public-api": "next",
-    "@devvit/reddit": "next",
-    "@devvit/redis": "next",
-    "@devvit/server": "next",
-    "devvit": "next",
+    "@devvit/client": "0.11.20-next-2025-07-24-17-36-25-fcf4a28f3.0",
+    "@devvit/public-api": "0.11.20-next-2025-07-24-17-36-25-fcf4a28f3.0",
+    "@devvit/reddit": "0.11.20-next-2025-07-24-17-36-25-fcf4a28f3.0",
+    "@devvit/redis": "0.11.20-next-2025-07-24-17-36-25-fcf4a28f3.0",
+    "@devvit/server": "0.11.20-next-2025-07-24-17-36-25-fcf4a28f3.0",
+    "devvit": "0.11.20-next-2025-07-24-17-36-25-fcf4a28f3.0",
     "express": "5.1.0",
     "phaser": "3.88.2"
   },
