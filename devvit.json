@@ -2,9 +2,11 @@
   "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
   "name": "<% name %>",
   "post": {
-    "client": {
-      "dir": "dist/client",
-      "entry": "dist/client/index.html"
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "entry": "index.html"
+      }
     }
   },
   "server": {
