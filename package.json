@@ -5,6 +5,7 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "scripts": {
+    "postinstall": "npm run build:client && npm run build:server",
     "build:client": "cd src/client && vite build",
     "build:server": "cd src/server && vite build",
     "check": "npm run type-check && npm run lint:fix && npm run prettier",
