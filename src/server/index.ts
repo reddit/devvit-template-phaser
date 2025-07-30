@@ -1,7 +1,6 @@
 import express from 'express';
 import { InitResponse, IncrementResponse, DecrementResponse } from '../shared/types/api';
-import { createServer, context } from '@devvit/server';
-import { redis } from '@devvit/redis';
+import { redis, createServer, context } from '@devvit/web/server';
 import { createPost } from './core/post';
 
 const app = express();
