@@ -10,7 +10,8 @@
     }
   },
   "server": {
-    "entry": "dist/server/index.cjs"
+    "dir": "dist/server",
+    "entry": "index.cjs"
   },
   "menu": {
     "items": [

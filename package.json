@@ -23,8 +23,8 @@
     "type-check": "tsc --build"
   },
   "dependencies": {
-    "@devvit/web": "0.11.20-next-2025-07-29-16-15-52-551cd5a95.0",
-    "devvit": "0.11.20-next-2025-07-29-16-15-52-551cd5a95.0",
+    "@devvit/web": "0.11.20-next-2025-07-31-18-55-14-a99ebe259.0",
+    "devvit": "0.11.20-next-2025-07-31-18-55-14-a99ebe259.0",
     "express": "5.1.0",
     "phaser": "3.88.2"
   },
