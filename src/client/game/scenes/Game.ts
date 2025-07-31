@@ -8,6 +8,9 @@ export class Game extends Scene {
   msg_text: Phaser.GameObjects.Text;
   count: number = 0;
   countText: Phaser.GameObjects.Text;
+  incButton: Phaser.GameObjects.Text;
+  decButton: Phaser.GameObjects.Text;
+  goButton: Phaser.GameObjects.Text;
 
   constructor() {
     super('Game');
@@ -72,7 +75,7 @@ export class Game extends Scene {
     };
 
     // Increment button
-    createButton(430, 'Increment', '#00ff00', async () => {
+    this.incButton = createButton(this.scale.height * 0.55, 'Increment', '#00ff00', async () => {
       try {
         const response = await fetch('/api/increment', { method: 'POST' });
         if (!response.ok) throw new Error(`API error: ${response.status}`);
@@ -86,7 +89,7 @@ export class Game extends Scene {
     });
 
     // Decrement button
-    createButton(510, 'Decrement', '#ff5555', async () => {
+    this.decButton = createButton(this.scale.height * 0.65, 'Decrement', '#ff5555', async () => {
       try {
         const response = await fetch('/api/decrement', { method: 'POST' });
         if (!response.ok) throw new Error(`API error: ${response.status}`);
@@ -100,11 +103,56 @@ export class Game extends Scene {
     });
 
     // Game Over button – navigates to the GameOver scene
-    createButton(590, 'Game Over', '#ffffff', () => {
+    this.goButton = createButton(this.scale.height * 0.75, 'Game Over', '#ffffff', () => {
       this.scene.start('GameOver');
     });
 
+    // Setup responsive layout
+    this.updateLayout(this.scale.width, this.scale.height);
+    this.scale.on('resize', (gameSize: Phaser.Structs.Size) => {
+      const { width, height } = gameSize;
+      this.updateLayout(width, height);
+    });
+
     // No automatic navigation to GameOver – users can stay in this scene.
+  }
+
+  updateLayout(width: number, height: number) {
+    // Resize camera viewport to avoid black bars
+    this.cameras.resize(width, height);
+
+    // Center and scale background image to cover screen
+    if (this.background) {
+      this.background.setPosition(width / 2, height / 2);
+      if (this.background.width && this.background.height) {
+        const scale = Math.max(width / this.background.width, height / this.background.height);
+        this.background.setScale(scale);
+      }
+    }
+
+    // Calculate a scale factor relative to a 1024 × 768 reference resolution.
+    // We only shrink on smaller screens – never enlarge above 1×.
+    const scaleFactor = Math.min(Math.min(width / 1024, height / 768), 1);
+
+    if (this.countText) {
+      this.countText.setPosition(width / 2, height * 0.45);
+      this.countText.setScale(scaleFactor);
+    }
+
+    if (this.incButton) {
+      this.incButton.setPosition(width / 2, height * 0.55);
+      this.incButton.setScale(scaleFactor);
+    }
+
+    if (this.decButton) {
+      this.decButton.setPosition(width / 2, height * 0.65);
+      this.decButton.setScale(scaleFactor);
+    }
+
+    if (this.goButton) {
+      this.goButton.setPosition(width / 2, height * 0.75);
+      this.goButton.setScale(scaleFactor);
+    }
   }
 
   updateCountText() {
