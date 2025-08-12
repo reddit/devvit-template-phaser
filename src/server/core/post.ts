@@ -6,7 +6,7 @@ export const createPost = async () => {
     throw new Error('subredditName is required');
   }
 
-  return await reddit.submitPost({
+  return await reddit.submitCustomPost({
     splash: {
       appDisplayName: '<% name %>',
     },
