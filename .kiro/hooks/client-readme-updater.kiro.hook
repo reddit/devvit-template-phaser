@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Client README Updater",
+  "description": "Monitors the client folder for significant updates and automatically updates the README.md file with current game description, innovative features, and play instructions",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/client/**/*"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The client folder has been updated. Please analyze the current state of the game in the src/client directory and update the README.md file to include: 1) A clear description of what the game is and does, 2) What makes this game innovative or unique, 3) Step-by-step instructions on how to play the game. Make sure to examine the main.ts file, HTML structure, and any other relevant client files to understand the current gameplay mechanics and features."
+  }
+}

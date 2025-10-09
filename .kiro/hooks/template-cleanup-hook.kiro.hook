@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "name": "Template Cleanup Assistant",
+  "description": "Detects when a user is ready to start building their own game and offers to remove the template Three.js Earth visualization code while preserving the Devvit project structure",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/client/main.ts",
+      "src/server/core/post.ts",
+      "README.md",
+      "package.json"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The user appears to be modifying the template project. Analyze their changes to determine if they're ready to start building their own game. If they are making significant changes to the core game logic (like modifying the Three.js Earth scene in main.ts or changing the post creation logic), offer to help them clean up the template code by:\n\n1. Removing the Earth visualization code from src/client/main.ts (Three.js scene, Earth textures, click handlers)\n2. Cleaning up the Earth-specific assets from src/client/public/ \n3. Updating src/server/core/post.ts to remove Earth-specific post content\n4. Providing a clean starting point with just the basic Three.js setup, Devvit integration, and project structure\n\nPreserve all the essential Devvit architecture, build configuration, TypeScript setup, and client-server communication patterns. Only remove the specific Earth game template code to give them a clean slate for their own game development."
+  }
+}
