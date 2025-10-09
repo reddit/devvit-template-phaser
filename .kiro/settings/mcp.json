@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "devvit-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@devvit/mcp"
+      ]      
+    }
+  }
+}
