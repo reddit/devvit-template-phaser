@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "name": "Devvit Fetch API Guide",
+  "description": "Monitors for external API/fetch requests and provides guidance on Devvit's fetch capabilities, domain allowlists, and review process",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*.ts",
+      "src/**/*.js",
+      "*.ts",
+      "*.js"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The user is working with external API requests or fetch calls in their Devvit application. Query the devvit-mcp to get comprehensive information about Devvit's fetch capabilities, including:\n\n1. Which domains are globally allow-listed for fetch requests\n2. The process for submitting domains for review by the Devvit team\n3. Any limitations or requirements for external API calls\n4. Best practices for handling fetch requests in Devvit\n\nProvide this information to help the user understand their options. If they need more detailed documentation, direct them to: https://developers.reddit.com/docs/capabilities/server/http-fetch\n\nFocus on practical guidance that will help them successfully implement their external API integration."
+  }
+}

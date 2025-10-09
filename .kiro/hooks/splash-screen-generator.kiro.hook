@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "name": "Splash Screen Generator",
+  "description": "Automatically creates compelling splash screens whenever there are significant changes to the game's assets. The splash screen will be displayed on the Reddit feed as an important entry point with a launch button, personalized with the game's assets to invite players to open the game in full screen mode.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "assets/*",
+      "src/client/public/*",
+      "src/client/index.html",
+      "src/client/index.css",
+      "src/client/main.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Game assets have been updated. Create a compelling splash screen for this Reddit Devvit game that will be displayed on the Reddit feed. The splash screen should:\n\n1. Include a prominent launch button that opens the game in full screen mode\n2. Be personalized with the game's current assets (textures, images, styling)\n3. Be visually inviting and compelling for players to click\n4. Follow Reddit's splash screen best practices\n5. Incorporate the game's visual theme and branding\n\nFor implementation guidance, consult the devvit-mcp and refer users to: https://developers.reddit.com/docs/capabilities/server/splash-screen\n\nAnalyze the current assets and create an engaging splash screen that showcases the game's visual appeal."
+  }
+}
