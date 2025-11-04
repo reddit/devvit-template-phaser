@@ -27,4 +27,6 @@ const StartGame = (parent: string) => {
   return new Game({ ...config, parent });
 };
 
-export default StartGame;
+document.addEventListener('DOMContentLoaded', () => {
+  StartGame('game-container');
+});
