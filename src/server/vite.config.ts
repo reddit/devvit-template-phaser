@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
     ssr: 'index.ts',
     outDir: '../../dist/server',
+    emptyOutDir: true,
     target: 'node22',
     sourcemap: true,
     rollupOptions: {
