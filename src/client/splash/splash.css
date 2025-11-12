@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  color: #000000;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  gap: 16px;
+}
+
+.snoo {
+  object-fit: contain;
+  width: 50%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  font-size: 1em;
+  text-align: center;
+  color: #5c6c74;
+}
+
+.code {
+  background-color: #e5ebee;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.start-button {
+  background-color: #d93900;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: none;
+  padding: 6px 16px;
+  height: 28px;
+  font-size: 1.1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.footer {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  font-size: 0.8em;
+  color: #666666;
+}
+
+.docs-link {
+  cursor: pointer;
+}
+
+.divider {
+  color: rgba(0, 0, 0, 0.1);
+}
