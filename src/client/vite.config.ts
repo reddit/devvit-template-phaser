@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   return {
+    logLevel: 'warn',
     build: {
       outDir: '../../dist/client',
       emptyOutDir: false,
