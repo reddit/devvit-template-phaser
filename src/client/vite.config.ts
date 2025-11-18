@@ -5,13 +5,13 @@ export default defineConfig(({ mode }) => {
   return {
     build: {
       outDir: '../../dist/client',
-      emptyOutDir: false,
+      emptyOutDir: true,
       sourcemap: true,
       chunkSizeWarningLimit: 1500,
       rollupOptions: {
         input: {
-          splash: 'splash/splash.html',
-          game: 'game/game.html',
+          splash: 'splash.html',
+          game: 'game.html',
         },
         output: {
           manualChunks: {

@@ -23,8 +23,8 @@
     "type-check": "tsc --build"
   },
   "dependencies": {
-    "@devvit/web": "0.12.2",
-    "devvit": "0.12.2",
+    "@devvit/web": "0.12.3",
+    "devvit": "0.12.3",
     "express": "5.1.0",
     "phaser": "3.88.2"
   },
