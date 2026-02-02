@@ -13,9 +13,6 @@
       }
     }
   },
-  "media": {
-    "dir": "assets"
-  },
   "server": {
     "dir": "dist/server",
     "entry": "index.cjs"
