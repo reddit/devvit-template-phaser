@@ -1,12 +1,7 @@
-// TypeScript config defaults for each sub-project (src, test, etc).
 {
   "$schema": "https://json.schemastore.org/tsconfig.json",
-
   "compilerOptions": {
-    // Enable incremental builds.
     "composite": true,
-
-    // Maximize type checking.
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "exactOptionalPropertyTypes": true,
@@ -18,27 +13,16 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "strict": true,
-
-    "types": [], // Projects add types needed.
-
-    // Improve compatibility with compilers that aren't type system aware.
+    "types": [],
     "isolatedModules": true,
-
-    // Use ESM.
     "esModuleInterop": true,
-
-    // Allow JSON type-checking and imports.
     "module": "ESNext",
     "moduleResolution": "Bundler",
-
-    // Assume library types are checked and compatible.
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-
     "sourceMap": true,
-
-    "target": "ES2023"
-  },
-  // https://github.com/microsoft/TypeScript/wiki/Performance#misconfigured-include-and-exclude
-  "exclude": ["dist", "node_modules", ".*/"]
+    "target": "ES2022",
+    "lib": ["DOM", "ES2023", "esnext.disposable"],
+    "jsx": "react-jsx"
+  }
 }

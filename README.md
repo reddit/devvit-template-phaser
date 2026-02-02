@@ -6,7 +6,7 @@ A starter to build web applications on Reddit's developer platform
 - [Vite](https://vite.dev/): For compiling the webView
 - [Phaser](https://phaser.io/): 2D game engine
 - [Express](https://expressjs.com/): For backend logic
-- [Typescript](https://www.typescriptlang.org/): For type safety
+- [TypeScript](https://www.typescriptlang.org/): For type safety
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ A starter to build web applications on Reddit's developer platform
 - `npm run deploy`: Uploads a new version of your app
 - `npm run launch`: Publishes your app for review
 - `npm run login`: Logs your CLI into Reddit
-- `npm run check`: Type checks, lints, and prettifies your app
+- `npm run type-check`: Type checks, lints, and prettifies your app
 
 ## Cursor Integration
 
