@@ -22,7 +22,6 @@
     "skipDefaultLibCheck": true,
     "sourceMap": true,
     "target": "ES2022",
-    "lib": ["DOM", "ES2023", "esnext.disposable"],
-    "jsx": "react-jsx"
+    "lib": ["DOM", "ES2023", "esnext.disposable"]
   }
 }
