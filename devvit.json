@@ -29,7 +29,7 @@
     ]
   },
   "triggers": {
-    "onAppInstall": "/internal/on-app-install"
+    "onAppInstall": "/internal/triggers/on-app-install"
   },
   "scripts": {
     "build": "vite build",
