@@ -25,10 +25,6 @@ A starter to build web applications on Reddit's developer platform
 - `npm run login`: Logs your CLI into Reddit
 - `npm run type-check`: Type checks, lints, and prettifies your app
 
-## Cursor Integration
-
-This template comes with a pre-configured cursor environment. To get started, [download cursor](https://www.cursor.com/downloads) and enable the `devvit-mcp` when prompted.
-
 ## Credits
 
 Thanks to the Phaser team for [providing a great template](https://github.com/phaserjs/template-vite-ts)!
