@@ -5,7 +5,7 @@
 
     "outDir": "../dist/types/shared",
 
-    "tsBuildInfoFile": "../dist/shared/tsconfig.tsbuildinfo",
+    "tsBuildInfoFile": "../dist/types/shared/tsconfig.tsbuildinfo",
 
     "rootDir": "../src/shared"
   },
