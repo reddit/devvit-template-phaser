@@ -1,8 +1,0 @@
-webroot
-.editorconfig
-.vscode
-.github
-.prettierrc
-tsconfig.json
-node_modules
-eslint.config.js

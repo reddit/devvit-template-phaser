@@ -1,6 +1,6 @@
 import { Scene } from 'phaser';
 import * as Phaser from 'phaser';
-import { IncrementResponse, DecrementResponse, InitResponse } from '../../../shared/types/api';
+import { IncrementResponse, DecrementResponse, InitResponse } from '../../shared/api';
 
 export class Game extends Scene {
   camera: Phaser.Cameras.Scene2D.Camera;

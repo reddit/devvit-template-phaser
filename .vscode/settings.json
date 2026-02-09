@@ -3,19 +3,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "json.schemaDownload.enable": true,
-  "cSpell.words": [
-    "cn",
-    "Devvit",
-    "playtest",
-    "protos",
-    "snoovatar",
-    "vstack",
-    "webbit",
-    "webroot",
-    "zstack"
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "files.exclude": {
-    "**/.git": false
-  }
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
