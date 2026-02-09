@@ -16,7 +16,7 @@
     "type-check": "tsc --build"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.2.0"
   },
   "dependencies": {
     "@devvit/start": "0.12.12",
