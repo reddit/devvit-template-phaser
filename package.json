@@ -22,7 +22,7 @@
     "@devvit/start": "0.12.12",
     "@devvit/web": "0.12.12",
     "@hono/node-server": "^1.19.9",
-    "devvit": "0.12.12",
+    "devvit": "0.12.20",
     "hono": "4.11.7",
     "phaser": "3.90.0"
   },
