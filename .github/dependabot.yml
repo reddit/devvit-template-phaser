@@ -1,0 +1,9 @@
+# Dependabot configuration to update npm packages weekly
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Location of your package.json and package-lock.json
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    open-pull-requests-limit: 10 # Optional: prevents PR spam by limiting active updates
