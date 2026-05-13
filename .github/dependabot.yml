@@ -4,8 +4,9 @@ updates:
   - package-ecosystem: "npm"
     directory: "/" # Location of your package.json and package-lock.json
     schedule:
-      interval: "weekly"
-      day: "tuesday"
+      interval: "cron"
+      cronjob: "0 17 * * 1,2" # At 5pm on Monday and Tuesday - https://crontab.guru/
+      timezone: "America/New_York"
     open-pull-requests-limit: 10 # Optional: prevents PR spam by limiting active updates
     ignore:
       - dependency-name: "@types/node"
