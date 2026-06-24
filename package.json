@@ -29,7 +29,7 @@
     "@eslint/js": "10.0.1",
     "@types/node": "^22.19.19",
     "eslint": "10.4.1",
-    "globals": "17.6.0",
+    "globals": "17.7.0",
     "prettier": "3.8.4",
     "typescript": "6.0.3",
     "typescript-eslint": "8.60.1",
