@@ -20,7 +20,7 @@
   "dependencies": {
     "@devvit/start": "0.13.6",
     "@devvit/web": "0.13.6",
-    "@hono/node-server": "2.0.6",
+    "@hono/node-server": "2.0.8",
     "devvit": "0.13.6",
     "hono": "4.12.27",
     "phaser": "4.2.0"
