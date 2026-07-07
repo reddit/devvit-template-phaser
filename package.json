@@ -18,10 +18,10 @@
     "node": ">=22.2.0"
   },
   "dependencies": {
-    "@devvit/start": "0.13.6",
-    "@devvit/web": "0.13.6",
+    "@devvit/start": "0.13.7",
+    "@devvit/web": "0.13.7",
     "@hono/node-server": "2.0.6",
-    "devvit": "0.13.6",
+    "devvit": "0.13.7",
     "hono": "4.12.27",
     "phaser": "4.2.0"
   },
