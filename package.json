@@ -22,7 +22,7 @@
     "@devvit/web": "0.13.8",
     "@hono/node-server": "2.0.8",
     "devvit": "0.13.8",
-    "hono": "4.12.28",
+    "hono": "4.12.31",
     "phaser": "4.2.0"
   },
   "devDependencies": {
