@@ -6,15 +6,14 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "deploy": "npm run type-check && npm run lint && devvit upload",
+    "deploy": "npm run test:types && npm run lint && devvit upload",
     "dev": "devvit playtest",
     "launch": "npm run deploy && devvit publish",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "login": "devvit login",
     "prettier": "prettier --write .",
     "test:types": "tsc --build",
-    "test:unit": "node --experimental-strip-types --no-warnings=ExperimentalWarning --test \"src/**/*.test.ts\"",
-    "type-check": "tsc --build"
+    "test:unit": "node --experimental-strip-types --no-warnings=ExperimentalWarning --test \"src/**/*.test.ts\""
   },
   "engines": {
     "node": ">=22.12.0"
