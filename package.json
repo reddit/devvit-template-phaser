@@ -16,7 +16,7 @@
     "test:unit": "node --experimental-strip-types --no-warnings=ExperimentalWarning --test \"src/**/*.test.ts\""
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.20.0"
   },
   "dependencies": {
     "@devvit/start": "0.13.10",
