@@ -11,6 +11,10 @@ updates:
     ignore:
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-major"]
+    cooldown:
+      exclude:
+        - "devvit"
+        - "@devvit/*"
     groups:
       devvit:
         patterns:
