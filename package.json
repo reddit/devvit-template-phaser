@@ -21,7 +21,7 @@
   "dependencies": {
     "@devvit/start": "0.14.1",
     "@devvit/web": "0.14.1",
-    "@hono/node-server": "2.0.12",
+    "@hono/node-server": "2.1.1",
     "devvit": "0.14.1",
     "hono": "4.12.32",
     "phaser": "4.2.1"
