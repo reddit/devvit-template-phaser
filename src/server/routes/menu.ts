@@ -25,3 +25,18 @@ menu.post('/post-create', async (c) => {
     );
   }
 });
+
+menu.post('/example-form', async (c) => {
+  return c.json<UiResponse>(
+    {
+      showForm: {
+        name: 'exampleForm',
+        form: {
+          title: 'Example form',
+          fields: [{ name: 'message', label: 'Message', type: 'string' }],
+        },
+      },
+    },
+    200
+  );
+});
